@@ -10,4 +10,4 @@ HTML Structure
 CSS Styling
 Javascript Event Handlers, Cases and DOM Manipulation
 
-#### Web Version found [here]
+#### Web Version found [here](https://swissbusybee.github.io/LPAC-LEP-indicator-code/)
