@@ -25,7 +25,7 @@ window.onload = function () {
     formTable(".grid");
 
     // TABLE SORT ON BUTTON CLICK 
-    //https://www.geeksforgeeks.org/how-to-sort-rows-in-a-table-using-javascript/
+    // https://www.geeksforgeeks.org/how-to-sort-rows-in-a-table-using-javascript/
 
     let clickedButton = document.getElementById("btnclick");
 
