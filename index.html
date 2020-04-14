@@ -4,16 +4,13 @@
 <head>
     <meta charset='utf-8'>
     <meta name='description' content='Calculate the LPAC-LEP Indicator Code Calculator for Texas Schools'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0 shrink-to-fit=no'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <link href='assets/css/style.css' rel='stylesheet' type='text/css'>
     <title>LPAC-LEP Indicator Code Calculator</title>
-    <script src="assets/script/script.js" type="text/javascript"></script>
-
 </head>
 
 <body>
-
     <!-- Header -->
 
     <header class="primary-header container group">
@@ -40,10 +37,10 @@
     <section class="row">
         <div class="grid">
 
-            <form id="selections">
+            <form action="#" id="selection-form">
 
                 <label for="select-year">Select Current School Year</label>
-                <select size="1" id="select-year" name="year-list" form="selections">
+                <select size="1" id="select-year" name="year-list" form="selection-form">
                     <option value="2032-2033">2032-2033</option>
                     <option value="2031-2032">2031-2032</option>
                     <option value="2030-2031">2030-2031</option>
@@ -67,12 +64,14 @@
                     <option value="2012-2013">2012-2013</option>
                     <option value="2011-2012">2011-2012</option>
                     <option value="2010-2011">2010-2011</option>
+                    <option value="2009-2010">2009-2010</option>
+                    <option value="2008-2009">2009-2010</option>
                 </select>
 
                 <label for="select-grade">Select Current Grade</label>
-                <select size="1" id="select-grade" name="grade-list" form="selections">
-                    <option value="K">K</option>
-                    <option value="1" selected="selected">1</option>
+                <select size="1" id="select-grade" name="grade-list" form="selection-form">
+                    <option value="K" selected="selected">K</option>
+                    <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -87,17 +86,19 @@
                 </select>
 
                 <label for="select-lep-code">Select LEP Indicator Code</label>
-                <select size="1" id="select-lep-code" name="lep-code-list" form="selections">
+                <select size="1" id="select-lep-code" name="lep-code-list" form="selection-form">
                     <option value="1 = EL (BIL/ESL/PD)" selected="selected">1 = EL (BIL/ESL/PD)</option>
-                    <option value="3 = M3">3 = M3</option>
-                    <option value="S = M2">S = M2</option>
                     <option value="F = M1">F = M1</option>
+                    <option value="S = M2">3 = M2</option>
+                    <option value="3 = M3">S = M3</option>
+                    <option value="4 = M4">3 = M4</option>
                 </select>
-                <button id="btnclick" class="btn btn-default" type="submit" name="submit"
-                    value="Calculate">Calculate</button>
+
+                <input id="btnclick" type="submit" name="submit"
+                    value="Calculate"></input>
             </form>
 
-            <table id='maintable'>
+            <table id='table'>
                 <thead>
                     <tr>
                         <th scope="col" id="school-year-table-header">School Year</th>
@@ -106,262 +107,19 @@
                         <!--<th>Years in School (if applicable)</th>-->
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>2022-2023</td>
-                        <td><select size="1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12" selected="selected">12</option>
-                            </select></td>
-                        <td>4 = M4</td>
-                        <!--<td>N/A</td>-->
-                    </tr>
-                    <tr>
-                        <td>2021-2022</td>
-                        <td><select size="1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11" selected="selected">11</option>
-                                <option value="12"">12</option> 
-                            </select></td>
-                        <td>3 = M3</td>
-                        <!--<td>N/A</td>-->
-                    </tr>
-                    <tr>
-                        <td>2020-2021</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10" selected="selected">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>S = M2</td>
-                        <!--<td>N/A</td>-->
-                    </tr>
-                    <tr>
-                        <td>2019-2020</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9" selected="selected">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>F = M1</td>
-                        <!--<td>N/A</td>-->
-                    </tr>
-                    <tr>
-                        <td>2018-2019</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8" selected="selected">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>8</td>-->
-                    </tr>
-                    <tr>
-                        <td>2017-2018</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7" selected="selected">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>7</td>-->
-                    </tr>
-                    <tr>
-                        <td>2016-2017</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6" selected="selected">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>6</td>-->
-                    </tr>
-                    <tr>
-                        <td>2015-2016</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5" selected="selected">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>5</td>-->
-                    </tr>
-                    <tr>
-                        <td>2014-2015</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4" selected="selected">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>4</td>-->
-                    </tr>
-                    <tr>
-                        <td>2013-2014</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3" selected="selected">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>3</td>-->
-                    </tr>
-                    <tr>
-                        <td>2012-2013</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1">1</option>
-                                <option value="2" selected="selected">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>2</td>-->
-                    </tr>
-                    <tr>
-                        <td>2011-2012</td>
-                        <td><select size=" 1" id="select-grade-overide" name="select-grade">
-                                <option value="K">K</option>
-                                <option value="1" selected="selected">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12"">12</option>
-                            </select></td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>1</td>-->
-                    </tr>
-                    <tr>
-                        <td>2010-2011</td>
-                        <td>K</td>
-                        <td>1 = EL (BIL/ESL/PD)</td>
-                        <!--<td>N/A</td>-->
-                    </tr>
-                </tbody>
-
             </table>
+
+            Edit Grade:<input type="text" name="grade" id="grade">
+            <button onclick="editGrade();">Submit Grade Edit</button>
 
         </div>
     </section>
 
+    <script src="assets/script/script.js" type="text/javascript"></script>
+</body>
+
 <!-- Footer -->
 
-    <footer class=" primary-footer container group"><small>&copy; LPAC-LEP Indicator Code Calculator</small </footer>
+  <footer class=" primary-footer container group"><small>&copy; LPAC-LEP Indicator Code Calculator</small></footer>
 
 </html>

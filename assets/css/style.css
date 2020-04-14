@@ -8,8 +8,8 @@
     margin: 0;
     padding: 0;
     }
-    
-    
+
+
     *,
     *:before,
     *:after {
@@ -17,7 +17,7 @@
          -moz-box-sizing: border-box;
               box-sizing: border-box;
     }
-    
+
 /*
   ========================================
   Custom styles
@@ -28,6 +28,9 @@ body {
   background: #293f50;
   color: #888;
   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
 }
 
 /*
@@ -164,7 +167,7 @@ em {
   ========================================
 */
 
-.btn {
+#btnclick, button {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
@@ -173,15 +176,18 @@ em {
   letter-spacing: .5px;
   margin: 0;
   text-transform: uppercase;
-}
-.btn-default {
   border: 0;
   background: #648880;
   padding: 11px 30px;
   font-size: 14px;
 }
-.btn-default:hover {
+
+#btnclick, button:hover {
   background: #77a198;
+}
+
+button {
+  margin-left: 100px;
 }
 
 /*
@@ -228,13 +234,99 @@ table {
     font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 100%;
   }
-  
+
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
   }
-  
+
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  table tr:not(:first-child) {
+    cursor: pointer;transition: all .25s ease-in-out;
+  }
+
+  table tr:not(:first-child):hover {
+    background: ##77a198;
+    opacity: 0.5;
+  }
+
+/*
+  ========================================
+  MediaQuery Styles
+  ========================================
+*/
+.primary-header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 320px) {
+  .primary-header  {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .welcome {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+/* SmartPhones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px){
+  .primary-header  {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .welcome {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+/* Tablets and iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .primary-header  {
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .welcome {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+/* Low resolution desktops and laptops ---------- */
+@media screen and (min-width: 1024px) {
+  .primary-header  {
+    width: 980px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .welcome {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+/* High resolution desktops and laptops ---------- */
+@media screen and (min-width: 1280px) {
+  .primary-header  {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .welcome {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
