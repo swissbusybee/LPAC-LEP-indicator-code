@@ -91,10 +91,6 @@ body {
   ========================================
 */
 
-.row,
-.row-alt {
-  min-width: 960px;
-}
 .row {
   background: #fff;
   padding: 66px 0 44px 0;
@@ -264,7 +260,8 @@ table {
   text-align: center;
 }
 
-.welcome h1 {
+.welcome {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -278,6 +275,7 @@ table {
   }
 
   .welcome {
+    width: 100%;
     margin: 0 auto;
     text-align: center;
   }
@@ -290,6 +288,7 @@ table {
     text-align: center;
   }
   .welcome {
+    width: 100%;
     margin: 0 auto;
     text-align: center;
   }
@@ -302,6 +301,7 @@ table {
     text-align: center;
   }
   .welcome {
+    width: 750px;
     margin: 0 auto;
     text-align: center;
   }
@@ -314,6 +314,7 @@ table {
     text-align: center;
   }
   .welcome {
+    width: 980px;
     margin: 0 auto;
     text-align: center;
   }
@@ -326,6 +327,7 @@ table {
     text-align: center;
   }
   .welcome {
+    width: 1200px;
     margin: 0 auto;
     text-align: center;
   }
